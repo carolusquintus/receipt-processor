@@ -1,2 +1,2 @@
-# receipt-processor
-Receipt Processor Challenge
+# Receipt Processor Challenge
+#### by [carolusquintus](https://github.com/carolusquintus)
