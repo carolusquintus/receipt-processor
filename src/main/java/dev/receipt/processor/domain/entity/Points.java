@@ -1,3 +1,3 @@
 package dev.receipt.processor.domain.entity;
 
-public record Points(Integer points) {}
+public record Points(Long points) {}
