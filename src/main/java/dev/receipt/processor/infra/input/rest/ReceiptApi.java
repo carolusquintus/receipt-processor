@@ -17,7 +17,7 @@ public class ReceiptApi {
 
     @Get("/{id}/points")
     public Points getReceiptPoints(@PathVariable UUID id) {
-        return new Points(54);
+        return new Points(54L);
     }
 
 }
