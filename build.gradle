@@ -14,9 +14,11 @@ repositories {
 
 dependencies {
     annotationProcessor "org.projectlombok:lombok:1.18.26"
+    annotationProcessor "org.mapstruct:mapstruct-processor:1.5.5.Final"
 
     implementation "io.micronaut:micronaut-jackson-databind:4.0.1"
     implementation "io.micronaut.redis:micronaut-redis-lettuce:6.0.1"
+    implementation "org.mapstruct:mapstruct:1.5.5.Final"
 
     compileOnly "org.projectlombok:lombok:1.18.26"
 
