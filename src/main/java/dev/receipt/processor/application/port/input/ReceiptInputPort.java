@@ -1,19 +1,34 @@
 package dev.receipt.processor.application.port.input;
 
+import dev.receipt.processor.application.port.output.EntityRepository;
 import dev.receipt.processor.application.usecase.ReceiptUseCase;
+import dev.receipt.processor.domain.dto.ReceiptDto;
 import dev.receipt.processor.domain.entity.Points;
 import dev.receipt.processor.domain.entity.Receipt;
 import dev.receipt.processor.domain.entity.ReceiptId;
+import dev.receipt.processor.domain.mapper.ReceiptMapper;
 import io.micronaut.context.annotation.Bean;
+import lombok.RequiredArgsConstructor;
 
 import java.util.UUID;
 
 @Bean
+@RequiredArgsConstructor
 public class ReceiptInputPort implements ReceiptUseCase {
 
+    private final ReceiptMapper mapper;
+    private final EntityRepository<UUID, Receipt> repository;
+
     @Override
-    public ReceiptId addReceipt(Receipt receipt) {
-        return new ReceiptId(UUID.randomUUID());
+    public ReceiptId addReceipt(ReceiptDto receiptDto) {
+        final var receiptId = new ReceiptId(UUID.randomUUID());
+
+        var receipt = mapper.toEntity(receiptDto);
+        receipt.setId(receiptId);
+
+        repository.save(receipt);
+
+        return receiptId;
     }
 
     @Override

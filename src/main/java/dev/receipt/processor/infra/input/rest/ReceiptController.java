@@ -1,8 +1,8 @@
 package dev.receipt.processor.infra.input.rest;
 
 import dev.receipt.processor.application.usecase.ReceiptUseCase;
+import dev.receipt.processor.domain.dto.ReceiptDto;
 import dev.receipt.processor.domain.entity.Points;
-import dev.receipt.processor.domain.entity.Receipt;
 import dev.receipt.processor.domain.entity.ReceiptId;
 import io.micronaut.http.annotation.*;
 import lombok.RequiredArgsConstructor;
@@ -16,7 +16,7 @@ public class ReceiptController {
     private final ReceiptUseCase useCase;
 
     @Post("/process")
-    public ReceiptId postReceiptProcess(@Body Receipt receipt) {
+    public ReceiptId postReceiptProcess(@Body ReceiptDto receipt) {
         return useCase.addReceipt(receipt);
     }
 
