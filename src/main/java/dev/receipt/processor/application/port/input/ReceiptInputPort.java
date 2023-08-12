@@ -21,14 +21,14 @@ public class ReceiptInputPort implements ReceiptUseCase {
 
     @Override
     public ReceiptId addReceipt(ReceiptDto receiptDto) {
-        final var receiptId = new ReceiptId(UUID.randomUUID());
+        final var id = UUID.randomUUID();
 
         var receipt = mapper.toEntity(receiptDto);
-        receipt.setId(receiptId);
+        receipt.setId(id);
 
         repository.save(receipt);
 
-        return receiptId;
+        return new ReceiptId(id);
     }
 
     @Override
