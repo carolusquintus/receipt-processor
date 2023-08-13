@@ -1,3 +1,5 @@
 package dev.receipt.processor.domain.entity;
 
-public record Item(String shortDescription, String price) {}
+import java.math.BigDecimal;
+
+public record Item(String shortDescription, BigDecimal price) {}
