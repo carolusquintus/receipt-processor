@@ -3,3 +3,7 @@ micronaut:
         name: receipt-processor
 redis:
     uri: redis://localhost
+netty:
+    default:
+        allocator:
+            max-order: 3
