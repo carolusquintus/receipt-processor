@@ -12,7 +12,7 @@ public class PurchaseTimeRule implements Rule<LocalTime> {
 
     @Override
     public Long process(LocalTime localTime) {
-        return 300L;
+        return 0L;
     }
 
 }

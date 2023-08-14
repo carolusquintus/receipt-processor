@@ -11,7 +11,7 @@ public class ItemRule implements Rule<Item> {
 
     @Override
     public Long process(Item item) {
-        return 600L;
+        return 0L;
     }
 
 }

@@ -12,7 +12,7 @@ public class PurchaseDateRule implements Rule<LocalDate> {
 
     @Override
     public Long process(LocalDate purchaseDate) {
-        return 200L;
+        return 0L;
     }
 
 }

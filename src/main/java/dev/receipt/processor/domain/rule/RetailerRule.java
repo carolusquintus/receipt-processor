@@ -10,7 +10,7 @@ public class RetailerRule implements Rule<String> {
 
     @Override
     public Long process(String retailer) {
-        return 100L;
+        return 0L;
     }
 
 }

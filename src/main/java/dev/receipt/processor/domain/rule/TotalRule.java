@@ -12,7 +12,7 @@ public class TotalRule implements Rule<BigDecimal> {
 
     @Override
     public Long process(BigDecimal total) {
-        return 400L;
+        return 0L;
     }
 
 }
