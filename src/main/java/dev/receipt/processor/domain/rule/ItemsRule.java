@@ -8,6 +8,8 @@ import lombok.RequiredArgsConstructor;
 
 import java.util.List;
 
+import static java.util.Objects.nonNull;
+
 @Bean
 @Named("itemsRule")
 @RequiredArgsConstructor
@@ -17,8 +19,18 @@ public class ItemsRule implements Rule<List<Item>> {
 
     @Override
     public Long process(List<Item> items) {
-        var sizeMultipleTwo = items.size() / 2;
-        return sizeMultipleTwo * 5L;
+        long sum = 0L;
+
+        if (nonNull(items) && items.size() > 0) {
+            var sizeMultipleTwo = items.size() / 2;
+            sum += sizeMultipleTwo * 5L;
+
+            sum += items.stream()
+                .mapToLong(itemRule::process)
+                .sum();
+        }
+
+        return sum;
     }
 
 }
