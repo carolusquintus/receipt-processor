@@ -33,6 +33,7 @@ public class ReceiptInputPort implements ReceiptUseCase {
 
     @Override
     public Points calculatePoints(ReceiptId id) {
+        repository.fetchById(id.id());
         return new Points(82L);
     }
 
