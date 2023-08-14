@@ -17,7 +17,8 @@ public class ItemsRule implements Rule<List<Item>> {
 
     @Override
     public Long process(List<Item> items) {
-        return 0L;
+        var sizeMultipleTwo = items.size() / 2;
+        return sizeMultipleTwo * 5L;
     }
 
 }
