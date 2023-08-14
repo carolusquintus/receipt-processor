@@ -12,7 +12,8 @@ public class PurchaseDateRule implements Rule<LocalDate> {
 
     @Override
     public Long process(LocalDate purchaseDate) {
-        return 0L;
+        var day = purchaseDate.getDayOfMonth();
+        return (day % 2 == 0) ? 0L : 6L;
     }
 
 }
