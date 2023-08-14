@@ -7,3 +7,6 @@ netty:
     default:
         allocator:
             max-order: 3
+logger:
+    levels:
+        dev.receipt.processor: DEBUG
