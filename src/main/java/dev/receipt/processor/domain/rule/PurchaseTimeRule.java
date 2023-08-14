@@ -11,8 +11,11 @@ import java.time.LocalTime;
 public class PurchaseTimeRule implements Rule<LocalTime> {
 
     @Override
-    public Long process(LocalTime localTime) {
-        return 0L;
+    public Long process(LocalTime purchaseTime) {
+        return (purchaseTime.isAfter(LocalTime.of(14, 0)) &&
+                purchaseTime.isBefore(LocalTime.of(16, 0)))
+            ? 10L
+            : 0L;
     }
 
 }
