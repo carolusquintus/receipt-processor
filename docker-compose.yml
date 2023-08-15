@@ -1,14 +1,42 @@
-version: '3.2'
+version: '3'
 services:
-  cache:
-    container_name: cache
-    image: redis:latest
+  receipt-processor-cache:
+    container_name: receipt-processor-cache
+    image: redis:7
     restart: always
     ports:
-      - '6379:6379'
+      - 6379:6379
     command: redis-server --loglevel warning
     volumes:
-      - cache:/data
+      - receipt-processor-cache-data:/data
+    networks:
+      - receipt-processor-network
+
+  receipt-processor-app:
+    container_name: receipt-processor-app
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        PACKAGE: ${RP_APP_JAR}
+        TYPE: jar
+    image: ${DOCKER_USER}/receipt-processor-app
+    depends_on:
+        - receipt-processor-cache
+    ports:
+        - 8080:8080
+    volumes:
+        - receipt-processor-app-data:/tmp
+    networks:
+        - receipt-processor-network
+
+networks:
+  receipt-processor-network:
+    name: receipt-processor-network
+
 volumes:
-  cache:
+  receipt-processor-cache-data:
+    name: receipt-processor-cache-data
     driver: local
+  receipt-processor-app-data:
+    name: receipt-processor-app-data
