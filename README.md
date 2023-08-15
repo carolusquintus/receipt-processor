@@ -14,11 +14,13 @@ Open your Terminal and follow next steps.
 $ curl -s "https://get.sdkman.io" | bash
 ```
 ![SDKMan install](screenshots/14-ago-2023_21-49-13.png)
+
 2. Install java jdk 17:
 ```
 $ sdk install java 17.0.8-zulu
 ```
 ![jdk install](screenshots/14-ago-2023_21-51-27.png)
+
 3. Install Gradle
 ```
 $ sdk install gradle 7.6.1
