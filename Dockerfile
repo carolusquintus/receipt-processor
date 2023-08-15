@@ -1,0 +1,10 @@
+FROM openjdk:17-alpine
+VOLUME /tmp
+
+ARG PACKAGE
+ARG TYPE
+ENV TYPE=$TYPE
+
+COPY $PACKAGE app.$TYPE
+
+ENTRYPOINT java -jar /app.$TYPE
