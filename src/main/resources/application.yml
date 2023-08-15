@@ -2,7 +2,7 @@ micronaut:
     application:
         name: receipt-processor
 redis:
-    uri: redis://localhost
+    uri: redis://receipt-processor-cache
 netty:
     default:
         allocator:
