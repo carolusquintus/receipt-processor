@@ -123,7 +123,7 @@ Substitute `id` Path variable with previous `{{receiptId}}`
 ![Get calculation receiptId](screenshots/15-ago-2023_20-19-59.png)
 
 5. Go back to `POST Submits a receipt for processing` request and copy a json body provided by the challenge\
-from `README.md` or [receipt-processor-challenge/examples](https://raw.githubusercontent.com/fetch-rewards/receipt-processor-challenge/main/api.yml)\
+from `README.md` or [receipt-processor-challenge/examples](https://github.com/fetch-rewards/receipt-processor-challenge/tree/main/examples)\
 Send a request and you will see the UUID response, which will be saved in `{{receipId}}` collections variable.
 ![1 POST /receipts/process](screenshots/15-ago-2023_20-23-55.png)
 
