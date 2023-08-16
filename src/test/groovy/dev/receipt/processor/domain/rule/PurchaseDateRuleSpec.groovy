@@ -22,7 +22,6 @@ class PurchaseDateRuleSpec extends Specification {
         LocalDate.of(2022, 1, 1)  || 6
         LocalDate.of(2022, 1, 2)  || 0
         LocalDate.of(2022, 3, 20) || 0
-
     }
 
 }
