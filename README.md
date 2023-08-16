@@ -134,3 +134,28 @@ and also the proper receipt points calculation.
 7. Example:
 ![2 POST /receipts/process](screenshots/15-ago-2023_20-25-15.png)
 ![2 GET /receipts/{id}/points](screenshots/15-ago-2023_20-25-38.png)
+
+## Unit testing & code coverage (WIP)
+
+This project uses `JaCoCo`(Java Code Coverage) plugin to generate html test reports.
+
+1. Run and generate test reports.
+```shell
+./gradlew test
+```
+![gradlew test](screenshots/16-ago-2023_12-14-34.png)
+
+2. Go to and locate `index.html` files and open them in your browser.
+   1. (WIP) For Test Summary report go to.
+    ```shell
+   /receipt-processor/build/reports/tests/test/index.html
+    ```
+   ![test-summary index.html](screenshots/16-ago-2023_12-21-16.png)
+   ![test-summary index.html opened](screenshots/16-ago-2023_12-25-54.png)
+
+   2. (WIP) For JaCoCo report go to.
+    ```shell
+   /receipt-processor/build/reports/jacoco/test/html/index.html
+    ```
+   ![jacoco index.html](screenshots/16-ago-2023_12-20-40.png)
+   ![jacoco index.html opened](screenshots/16-ago-2023_12-26-22.png)
