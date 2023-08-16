@@ -1,6 +1,8 @@
 plugins {
     id('com.github.johnrengelman.shadow') version '7.1.2'
     id('io.micronaut.application') version '3.7.10'
+    id('groovy')
+    id('jacoco')
 }
 
 version = '0.1'
@@ -44,6 +46,3 @@ micronaut {
         annotations('dev.receipt.processor.*')
     }
 }
-
-
-
