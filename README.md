@@ -148,14 +148,14 @@ This project uses `JaCoCo`(Java Code Coverage) plugin to generate html test repo
 2. Go to and locate `index.html` files and open them in your browser.
    1. (WIP) For Test Summary report go to.
     ```shell
-   /receipt-processor/build/reports/tests/test/index.html
+   receipt-processor/build/reports/tests/test/index.html
     ```
    ![test-summary index.html](screenshots/16-ago-2023_12-21-16.png)
    ![test-summary index.html opened](screenshots/16-ago-2023_12-25-54.png)
 
    2. (WIP) For JaCoCo report go to.
     ```shell
-   /receipt-processor/build/reports/jacoco/test/html/index.html
+   receipt-processor/build/reports/jacoco/test/html/index.html
     ```
    ![jacoco index.html](screenshots/16-ago-2023_12-20-40.png)
    ![jacoco index.html opened](screenshots/16-ago-2023_12-26-22.png)
