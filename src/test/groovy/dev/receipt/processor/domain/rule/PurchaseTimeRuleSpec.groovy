@@ -22,6 +22,7 @@ class PurchaseTimeRuleSpec extends Specification {
         LocalTime.of(8, 13)  || 0
         LocalTime.of(13, 13) || 0
         LocalTime.of(13, 1)  || 0
+        LocalTime.of(20, 1)  || 0
         LocalTime.of(14, 33) || 10
     }
 
