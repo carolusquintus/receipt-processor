@@ -4,7 +4,7 @@ import spock.lang.Specification
 
 class RetailerRuleSpec extends Specification {
 
-    def "Calculates points when retailer: #retailer == #points points" () {
+    def "Calculates points for every alphanumeric character when retailer: #retailer == #points points" () {
         given:
         def rule = new RetailerRule()
 
@@ -20,8 +20,8 @@ class RetailerRuleSpec extends Specification {
         ''                  || 0
         ' '                 || 0
         'Target'            || 6
+        'Walgreens'         || 9
         'M&M Corner Market' || 14
-
     }
 
 }
