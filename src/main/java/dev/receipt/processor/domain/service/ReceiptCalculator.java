@@ -5,6 +5,7 @@ import dev.receipt.processor.domain.entity.Receipt;
 import dev.receipt.processor.domain.rule.shared.Rule;
 import dev.receipt.processor.domain.service.shared.Calculator;
 import io.micronaut.context.annotation.Bean;
+import io.micronaut.context.annotation.Primary;
 import lombok.RequiredArgsConstructor;
 
 import java.math.BigDecimal;
@@ -13,6 +14,7 @@ import java.time.LocalTime;
 import java.util.List;
 
 @Bean
+@Primary
 @RequiredArgsConstructor
 public class ReceiptCalculator implements Calculator<Receipt> {
 
