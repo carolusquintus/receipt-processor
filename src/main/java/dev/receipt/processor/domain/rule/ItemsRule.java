@@ -25,9 +25,9 @@ public class ItemsRule implements Rule<List<Item>> {
             var sizeMultipleTwo = items.size() / 2;
             sum += sizeMultipleTwo * 5L;
 
-            sum += items.stream()
-                .mapToLong(itemRule::process)
-                .sum();
+            sum += items.parallelStream()
+                .map(itemRule::process)
+                .reduce(0L, Long::sum);
         }
 
         return sum;
