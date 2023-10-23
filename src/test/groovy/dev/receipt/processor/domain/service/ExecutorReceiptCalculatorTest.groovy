@@ -29,6 +29,7 @@ class ExecutorReceiptCalculatorTest extends Specification {
             )
         )
     }
+
     def "Executors Receipt sum"() {
         given:
         def receipt = new Receipt(
